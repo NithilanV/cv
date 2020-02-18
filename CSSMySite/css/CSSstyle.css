@@ -12,14 +12,10 @@ body{
     font-family: 'Noto Sans', sans-serif;
 }
 .mid{
-    background-color: blue;
-    width: 200px;
-    height: 200px;
+    
 }
 .bot{
-    background-color: red;
-    width: 200px;
-    height: 200px;
+    
 }
 .kid{
     text-decoration: underline;
@@ -29,4 +25,14 @@ body{
 }
 .p{
     font-family: 'Tomorrow', sans-serif;
+}
+.topc{
+    position: absolute;
+    right: 300px;
+    top: 50px;
+}
+.botc{
+    position: absolute;
+    left: 300px;
+    bottom: 300px;
 }
