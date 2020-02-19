@@ -6,6 +6,7 @@ h1{
     margin: 0 auto;
     width: 10%;
     font-family: 'Lemonada', cursive;
+    color: #66bfbf;
 }
 body{
     margin: 0px;
@@ -35,4 +36,10 @@ body{
     position: absolute;
     left: 300px;
     bottom: 300px;
+}
+h3{
+    color: #3282b2;
+}
+h2{
+    color: #3282b2;
 }
