@@ -3,12 +3,12 @@
     text-align: center;
 }
 h1{
-    margin: 0 auto;
-    width: 10%;
+    font-size: 5.625rem;
+    margin: 50px auto 0 auto;
     font-family: 'Lemonada', cursive;
 }
 body{
-    margin: 0px;
+    text-align: center;
     font-family: 'Noto Sans', sans-serif;
 }
 .mid{
@@ -25,6 +25,9 @@ body{
 }
 .p{
     font-family: 'Tomorrow', sans-serif;
+    color: #000000;
+    margin-top: 0;
+    font-weight: normal;
 }
 .topc{
     position: absolute;
@@ -41,7 +44,14 @@ h3{
 }
 h2{
     color: #3282b2;
+    font-size: 2.5rem;
 }
 .images{
     height:100px;
+}
+.skill-row{
+    width: 50%;
+    margin: 100px auto;
+    text-align: left;
+    line-height: 2;
 }
