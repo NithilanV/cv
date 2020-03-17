@@ -15,7 +15,8 @@ body{
     
 }
 .bot{
-    
+    background-color: #66bfbf;
+    margin-bottom: 0;
 }
 .kid{
     text-decoration: underline;
@@ -25,7 +26,7 @@ body{
 }
 .p{
     font-family: 'Tomorrow', sans-serif;
-    color: #000000;
+    color: #66bfbf;
     margin-top: 0;
     font-weight: normal;
 }
@@ -86,4 +87,7 @@ h2{
 .btn:active {
 	position:relative;
 	top:1px;
+}
+.a{
+    color: #11999e;
 }
