@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <input value="metric" name="a" type="radio"><label>Metric</label><br>
+        <input value="imperial" name="a" type="radio"><label>Imperial</label><br>
+        <input value="london" id="cityName">
+        <button onclick="unitsOfMeasurement()">Search</button>
+        <h1 id=name></h1>
+        <p>The weather:</p>
+        <p id=weather></p>
+        <p>the temperature:</p>
+        <p id=temp></p>
+        <p>the windspeed:</p>
+        <p id=windspeed></p>
+        <script>
+            var units="metric"
+            function unitsOfMeasurement() {
+                console.log("fn UnitsOfMesas called");
+                var type = document.getElementsByName("a");
+                if (type[0].checked) {
+                    units="metric"
+                }else if (type[1].checked) {
+                    units="imperial"
+                }
+                search()
+            }
+            function search() {
+                var input=document.getElementById("cityName").value;
+                var xmlhttp = new XMLHttpRequest();
+                var url = "https://api.openweathermap.org/data/2.5/weather?q="+ input  +"&units="+ units +"&appid=126cac1a482f51de0f1287b45ae2bf9a";
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myArr = JSON.parse(this.responseText);
+                        myFunction(myArr);
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+            }
+            // var input=document.getElementById("cityName").value;
+            // var xmlhttp = new XMLHttpRequest();
+            // var url = "https://api.openweathermap.org/data/2.5/weather?q="+ input  +"&units=metric&appid=126cac1a482f51de0f1287b45ae2bf9a";
+            // xmlhttp.onreadystatechange = function() {
+            //     if (this.readyState == 4 && this.status == 200) {
+            //         var myArr = JSON.parse(this.responseText);
+            //         myFunction(myArr);
+            //     }
+            // };
+            // xmlhttp.open("GET", url, true);
+            // xmlhttp.send();
+            function myFunction(arr) {
+                document.getElementById("name").innerHTML = arr['name'];
+                document.getElementById("weather").innerHTML = JSON.stringify(arr['weather'][0]['description']);
+                document.getElementById("temp").innerHTML = arr['main']['temp'];
+                document.getElementById("windspeed").innerHTML = arr['wind']['speed'];
+            }
+        </script>
+    </body>
+</html>
